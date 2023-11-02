@@ -9,6 +9,7 @@ namespace SIS.API
         public MappingConfig()
         {
             CreateMap<Teacher, TeacherDTO>().ReverseMap();
+            CreateMap<StudentGroup, StudentGroupDTO>().ReverseMap();
         }
     }
 }
