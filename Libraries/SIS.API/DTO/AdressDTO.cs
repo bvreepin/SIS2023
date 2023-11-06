@@ -18,7 +18,5 @@ namespace SIS.API.DTO
         public int PostalCode { get; set; }
 
         public string City { get; set; } = null!;
-
-        public int CountryId { get; set; }
     }
 }

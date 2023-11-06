@@ -1,3 +1,20 @@
-{
-  // adres van schoolgebouwen of leerlingen en leerkrachten?
-}
+[
+  { //Campus Aalst
+    "City": "Aalst",
+    "Street": "Arbeidstraat",
+    "StreetNumber": 14,
+    "PostalCode": 9300
+  },
+  { // Campus Mercator
+    "City": "Gent",
+    "Street": "Henleykaai",
+    "StreetNumber": 84,
+    "PostalCode": 9000
+  },
+  { // Campus Schoonmeersen
+    "City": "Gent",
+    "Street": "Valentin Vaerwyckweg",
+    "StreetNumber": 1,
+    "PostalCode": 9000
+  }
+]
