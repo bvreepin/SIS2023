@@ -13,13 +13,13 @@ namespace SIS.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AdressController : ControllerBase
+    public class AddressController : ControllerBase
     {
-        private readonly ILogger<AdressController> _logger;
+        private readonly ILogger<AddressController> _logger;
         private readonly ISISAdressRepository _repository;
         private readonly IMapper _mapper;
 
-        public AdressController(ILogger<AdressController> logger, ISISAdressRepository repository, IMapper mapper)
+        public AddressController(ILogger<AddressController> logger, ISISAdressRepository repository, IMapper mapper)
         {
             _logger = logger;
             _repository = repository;
@@ -27,9 +27,9 @@ namespace SIS.API.Controllers
         }
 
         [HttpGet(Name = "GetAdressess")] //meervoud adressen of enkelvoud?
-        public ActionResult<IEnumerable<AdressDTO>> Get()
+        public ActionResult<IEnumerable<AddressDTO>> Get()
         {
-            return Ok(_mapper.Map<List<AdressDTO>>(_repository.Adresses.Values.ToList()));
+            return Ok(_mapper.Map<List<AddressDTO>>(_repository.Adresses.Values.ToList()));
         }
     }
 }

@@ -45,11 +45,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS.API", "Libraries\SIS.AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadStudentGroupConsoleApp", "Apps\UploadStudentGroupConsoleApp\UploadStudentGroupConsoleApp.csproj", "{E5EDEDF8-6EB7-47DF-8F8C-D73261F089AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadStudentConsoleApp", "Apps\UploadStudentConsoleApp\UploadStudentConsoleApp.csproj", "{9250337A-B25E-4887-AD80-B0477FF6D7BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadStudentConsoleApp", "Apps\UploadStudentConsoleApp\UploadStudentConsoleApp.csproj", "{9250337A-B25E-4887-AD80-B0477FF6D7BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadIOEMConsoleApp", "Apps\UploadIOEMConsoleApp\UploadIOEMConsoleApp.csproj", "{A3830AC1-E452-4F50-8B21-CF171F86874C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadIOEMConsoleApp", "Apps\UploadIOEMConsoleApp\UploadIOEMConsoleApp.csproj", "{A3830AC1-E452-4F50-8B21-CF171F86874C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadAdressConsoleApp", "Apps\UploadAdressConsoleApp\UploadAdressConsoleApp.csproj", "{C9719998-EA9D-4A18-AF80-4E36D1CB6D60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadAddressConsoleApp", "Apps\UploadAdressConsoleApp\UploadAddressConsoleApp.csproj", "{C9719998-EA9D-4A18-AF80-4E36D1CB6D60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

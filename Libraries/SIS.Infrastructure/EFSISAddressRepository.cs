@@ -11,15 +11,15 @@ using System.Threading.Tasks;
 
 namespace SIS.Infrastructure
 {
-    public class EFSISAdressRepository : ISISAdressRepository
+    public class EFSISAddressRepository : ISISAdressRepository
     {
-        private readonly ILogger<EFSISAdressRepository> _logger;
+        private readonly ILogger<EFSISAddressRepository> _logger;
         private readonly IConfiguration _configuration;
         private readonly SisDbContext _context;
 
-        private Dictionary<string, Adress> _adresses;
+        private Dictionary<string, Address> _adresses;
 
-        public EFSISAdressRepository(ILogger<EFSISAdressRepository> logger, IConfiguration configuration, SisDbContext context)
+        public EFSISAddressRepository(ILogger<EFSISAddressRepository> logger, IConfiguration configuration, SisDbContext context)
         {
             _logger = logger;
             _configuration = configuration;
@@ -29,7 +29,7 @@ namespace SIS.Infrastructure
             RefreshAdress();
         }
 
-        public Dictionary<string, Adress> Adresses
+        public Dictionary<string, Address> Adresses
         {
             get
             {
@@ -38,9 +38,9 @@ namespace SIS.Infrastructure
             }
         }
 
-        public Dictionary<string, Adress> RefreshAdress()
+        public Dictionary<string, Address> RefreshAdress()
         {
-            _adresses = new Dictionary<string, Adress>();
+            _adresses = new Dictionary<string, Address>();
             // vanaf hier nog niet aangepast
             var dbStudents = _context.Students.Include(s => s.RegistrationState).ToList();
 

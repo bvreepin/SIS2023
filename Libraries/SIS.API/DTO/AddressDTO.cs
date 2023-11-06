@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SIS.API.DTO
 {
-    public class AdressDTO
+    public class AddressDTO
     {
         //kan vrijwel allemaal als key gebruikt worden....choose wisely?
         public string Street { get; set; } = null!;

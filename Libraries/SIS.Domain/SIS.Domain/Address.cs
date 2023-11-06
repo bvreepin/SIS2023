@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SIS.Domain
 {
-    public class Adress
+    public class Address
     {
         public string Street { get; set; } = null!;
 
