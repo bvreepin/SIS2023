@@ -97,9 +97,10 @@ namespace SIS.Infrastructure
                 {
                     Email = student.Email,
                     Person = efPerson,
-                    PersonId = efPerson.PersonId;
+                    PersonId = efPerson.PersonId,
+                    OfficialCode = student.OfficialCode
                 };
-                var efTeacher = _context.Teachers.Add(newStudent).Entity;
+                var efTeacher = _context.Students.Add(newStudent).Entity;
                 var count = _context.SaveChanges();
             }
         }

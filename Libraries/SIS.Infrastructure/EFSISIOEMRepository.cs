@@ -26,7 +26,6 @@ namespace SIS.Infrastructure
             _configuration = configuration;
             _context = context;
 
-            // Laad alle studenten bij aanmaken van de repository
             RefreshIOEM();
         }
 
