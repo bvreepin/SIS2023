@@ -76,7 +76,7 @@ namespace SIS.Infrastructure
                 return;
 
             // Test if Person already exists...
-            var person = _personRepository.Persons.Values.Where(person => person.FirstName == student.firs && student.LastName == student.LastName).FirstOrDefault();
+            var person = _personRepository.Persons.Values.Where(person => person.FirstName == student.Firstname && person.LastName == student.LastName).FirstOrDefault();
             if (person == null)
             {
                 person = new Person { FirstName = student.Firstname, LastName = student.LastName };
@@ -84,13 +84,13 @@ namespace SIS.Infrastructure
             }
             var efPerson = _context.People.Where(person => person.FirstName == student.Firstname && person.LastName == student.LastName).FirstOrDefault();
             
-            var registrationState = _registrationStateRepository.RegistrationStates.Values.Where(tt => tt.Description == student.RegistrationState).FirstOrDefault();
+            var registrationState = _registrationStateRepository.RegistrationStates.Values.Where(s => s.Description == student.RegistrationState).FirstOrDefault();
             if (registrationState == null)
             {
                 registrationState = new RegistrationState { Description = student.RegistrationState };
                 _registrationStateRepository.Insert(registrationState);
             }
-            var efRegistrationState = _context.RegistrationStates.Where(tt => tt.Description == student.RegistrationState).FirstOrDefault();
+            var efRegistrationState = _context.RegistrationStates.Where(s => s.Description == student.RegistrationState).FirstOrDefault();
             if (efPerson != null && efRegistrationState != null)
             {
                 EFRepository.Models.Student newStudent = new()

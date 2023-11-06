@@ -49,16 +49,15 @@ namespace SIS.Infrastructure
 
         public void Insert(StudentGroup studentGroup)
         {
+            if (_studentGroups.ContainsKey(studentGroup.Name))
+                return;
+
             EFRepository.Models.StudentGroup newStudentGroup = new()
             {
                 Name = studentGroup.Name
             };
             var efStudentGroup = _context.StudentGroups.Add(newStudentGroup).Entity;
             var count = _context.SaveChanges();
-            if (count == 1)
-            {
-                _studentGroups.Add(studentGroup.Name, studentGroup);
-            }
         }
 
         public void Update(StudentGroup studentGroup)
