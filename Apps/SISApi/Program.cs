@@ -31,8 +31,8 @@ namespace SISApi
                   .AddScoped<ISISRegistrationStateRepository, EFSISRegistrationStateRepository>() // here I could pick the ADO.NET alternative
                   .AddScoped<ISISPersonRepository, EFSISPersonRepository>() // here I could pick the ADO.NET alternative
                   .AddScoped<ISISTeacherRepository, EFSISTeacherRepository>() // here I could pick the ADO.NET alternative
-                  .AddScoped<ISISStudentGroupRepository, EFSISStudentGroupRepository>(); // here I could pick the ADO.NET alternative
-
+                  .AddScoped<ISISStudentGroupRepository, EFSISStudentGroupRepository>() // here I could pick the ADO.NET alternative
+                  .AddScoped<ISISStudentRepository, EFSISStudentRepository>();
 
             builder.Services.AddAutoMapper(typeof(MappingConfig));
 

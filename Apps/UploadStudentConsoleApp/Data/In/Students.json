@@ -2,7 +2,7 @@
 
   {
     "OfficialCode": "096763nc",
-    "LastName": "COURTEAUX",
+    "LastName": "Courteaux",
     "FirstName": "Nathalie",
     "Phone": null,
     "Mobile": null,
@@ -11,7 +11,7 @@
   },
   {
     "OfficialCode": "264857sd",
-    "LastName": "DE BRUCKER",
+    "LastName": "De Brucker",
     "FirstName": "Steije",
     "Phone": null,
     "Mobile": null,
@@ -21,7 +21,7 @@
   {
 
     "OfficialCode": "290222md",
-    "LastName": "DE GENDT",
+    "LastName": "De Gendt",
     "FirstName": "Merel",
     "Phone": null,
     "Mobile": null,
@@ -30,7 +30,7 @@
   },
   {
     "OfficialCode": "288668dd",
-    "LastName": "DE MOOR",
+    "LastName": "De Moor",
     "FirstName": "Dylan",
     "Phone": null,
     "Mobile": null,
@@ -39,7 +39,7 @@
   },
   {
     "OfficialCode": "075912id",
-    "LastName": "DE MOOR",
+    "LastName": "De Moor",
     "FirstName": "Iwein",
     "Phone": null,
     "Mobile": null,
@@ -48,7 +48,7 @@
   },
   {
     "OfficialCode": "290645jd",
-    "LastName": "DE ZUTTER",
+    "LastName": "De Zutter",
     "FirstName": "Jorn",
     "Phone": null,
     "Mobile": null,
@@ -57,7 +57,7 @@
   },
   {
     "OfficialCode": "290585jd",
-    "LastName": "DEPOORTER",
+    "LastName": "Depoorter",
     "FirstName": "Jeroen",
     "Phone": null,
     "Mobile": null,
@@ -66,7 +66,7 @@
   },
   {
     "OfficialCode": "293049jg",
-    "LastName": "GHYSENS",
+    "LastName": "Ghysens",
     "FirstName": "Jari",
     "Phone": null,
     "Mobile": null,
@@ -76,7 +76,7 @@
   },
   {
     "OfficialCode": "291625al",
-    "LastName": "LAUWERS",
+    "LastName": "Lauwers",
     "FirstName": "Andy",
     "Phone": null,
     "Mobile": null,
@@ -85,7 +85,7 @@
   },
   {
     "OfficialCode": "289651sp",
-    "LastName": "PARIDAENS",
+    "LastName": "Paridaens",
     "FirstName": "Stan",
     "Phone": null,
     "Mobile": null,
@@ -95,16 +95,16 @@
   },
   {
     "OfficialCode": "294324iq",
-    "LastName": "QUATEAU",
+    "LastName": "Quateau",
     "FirstName": "Ilya",
     "Phone": null,
     "Mobile": null,
     "Email": "ilya.quateau@student.hogent.be",
     "RegistrationState": "Student",
- },
+  },
   {
     "OfficialCode": "288900mv",
-    "LastName": "VAN DAMME",
+    "LastName": "Van Damme",
     "FirstName": "Myrddin",
     "Phone": null,
     "Mobile": null,
@@ -113,7 +113,7 @@
   },
   {
     "OfficialCode": "965664lv",
-    "LastName": "VAN MULDERS",
+    "LastName": "Van Mulders",
     "FirstName": "Lars",
     "Phone": null,
     "Mobile": null,
@@ -122,7 +122,7 @@
   },
   {
     "OfficialCode": "294000bv",
-    "LastName": "VAN REEPINGEN",
+    "LastName": "Van Reepingen",
     "FirstName": "Brad",
     "Phone": null,
     "Mobile": null,
@@ -132,7 +132,7 @@
   },
   {
     "OfficialCode": "291374sv",
-    "LastName": "VAN WIJMEERSCH",
+    "LastName": "Van Wijmeersch",
     "FirstName": "Stijn",
     "Phone": null,
     "Mobile": null,
@@ -141,7 +141,7 @@
   },
   {
     "OfficialCode": "289160tv",
-    "LastName": "VANDENBERGH",
+    "LastName": "Vandenbergh",
     "FirstName": "Tibo",
     "Phone": null,
     "Mobile": null,
@@ -149,24 +149,22 @@
     "RegistrationState": "Student"
   },
   {
-    "OfficialCode": "860203gv",
-    "LastName": "VEREECKEN",
-    "FirstName": "Glenn",
-    "Phone": null,
-    "Mobile": null,
     "Email": "glenn.vereecken@student.hogent.be",
+    "FirstName": "Glenn",
+    "LastName": "Vereecken",
+    "Mobile": null,
+    "OfficialCode": "860203gv",
+    "Phone": null,
     "RegistrationState": "Student"
   },
   {
     "OfficialCode": "077251mz",
-    "LastName": "ZEMMOURI",
+    "LastName": "Zemmouri",
     "FirstName": "Mohamed",
     "Phone": null,
     "Mobile": null,
     "Email": "mohamed.zemmouri@student.hogent.be",
     "RegistrationState": "Student"
   }
-  
+
 ]
-
-
