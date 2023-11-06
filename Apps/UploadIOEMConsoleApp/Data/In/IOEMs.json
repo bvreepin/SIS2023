@@ -1,0 +1,19 @@
+
+  [
+    {
+      "Description": "Bij schriftelijke evaluaties (incl. evaluaties op computer) krijgt de student 15 minuten extra tijd per evaluatieuur. Dit geldt zowel voor evaluaties binnen als buiten het examenrooster.",
+      "ShortName": "Extra tijd - schriftelijke evaluatie (15 min)",
+      "Title": "Extra tijd voor een schriftelijke evaluatie",
+      "Detail": "Docenten kunnen vragen om je recht op extra tijd aan te geven en vooraan plaats te nemen.",
+      "Remark": ""
+    },
+    {
+      "Description": "De student mag na een schriftelijke evaluatie (incl. evaluatie op computer) met open vragen de antwoorden mondeling toelichten om eventuele onduidelijkheden weg te werken. Er kan geen nieuwe informatie worden toegevoegd.",
+      "ShortName": "Examen - mondeling overlopen van de antwoorden",
+      "Title": "Mondelinge toelichting bij een examen",
+      "Detail": "Indien je gebruik wenst te maken van deze examenmaatregel, neem je zelf het initiatief om de lesgever tijdig (voor 10/12/2023 (examenperiode 1), 12/05/2024 (examenperiode 2) en 30/06/2024 (examenperiode 3)) te contacteren om correcte en concrete afspraken te maken m.b.t. mondelinge toelichting bij een examen.",
+      "Remark": ""
+    }
+  ]
+
+
