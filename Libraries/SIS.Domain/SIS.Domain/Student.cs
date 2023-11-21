@@ -8,11 +8,11 @@ namespace SIS.Domain
 {
     public class Student
     {
-        public string? Firstname { get; set; }
-        public string? LastName { get; set; }
-        public string? Mobile { get; set; }
+        public string? Firstname { get; set; } = string.Empty;
+        public string? LastName { get; set; } = string.Empty;
+        public string? Mobile { get; set; } = string.Empty;
 
-        public string? Email { get; set; }
+        public string? Email { get; set; } = string.Empty;
 
         public long OfficialCode { get; set; }
 

@@ -9,7 +9,7 @@ namespace SIS.API.DTO
     public class AddressDTO
     {
         //kan vrijwel allemaal als key gebruikt worden....choose wisely?
-        public string Street { get; set; } = null!;
+        public string Street { get; set; } = string.Empty;
 
         public int StreetNumber { get; set; }
 
@@ -17,6 +17,6 @@ namespace SIS.API.DTO
 
         public int PostalCode { get; set; }
 
-        public string City { get; set; } = null!;
+        public string City { get; set; } = string.Empty;
     }
 }

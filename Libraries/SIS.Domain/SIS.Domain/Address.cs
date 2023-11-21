@@ -8,7 +8,7 @@ namespace SIS.Domain
 {
     public class Address
     {
-        public string Street { get; set; } = null!;
+        public string Street { get; set; } = string.Empty;
 
         public int StreetNumber { get; set; }
 
@@ -16,7 +16,7 @@ namespace SIS.Domain
 
         public int PostalCode { get; set; }
 
-        public string City { get; set; } = null!;
+        public string City { get; set; } = string.Empty;
 
         public int CountryId { get; set; }
     }

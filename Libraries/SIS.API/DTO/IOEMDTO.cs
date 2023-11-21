@@ -9,11 +9,7 @@ namespace SIS.API.DTO
 {
     public class IOEMDTO
     {
-        [MaxLength(100)]
-        public string ShortName { get; set; } = null!;
-
-        public string? Title { get; set; }
-
-       // public string? Remark { get; set; }
+        [MaxLength(500)]
+        public string? Title { get; set; } = string.Empty;
     }
 }

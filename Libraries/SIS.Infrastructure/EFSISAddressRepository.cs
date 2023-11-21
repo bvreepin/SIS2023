@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace SIS.Infrastructure
 {
-    public class EFSISAddressRepository : ISISAdressRepository
+    public class EFSISAddressRepository : ISISAddressRepository
     {
         private readonly ILogger<EFSISAddressRepository> _logger;
         private readonly IConfiguration _configuration;
         private readonly SisDbContext _context;
 
-        private Dictionary<string, Address> _adresses;
+        private Dictionary<string, Address> _addresses;
 
         public EFSISAddressRepository(ILogger<EFSISAddressRepository> logger, IConfiguration configuration, SisDbContext context)
         {
@@ -25,47 +25,32 @@ namespace SIS.Infrastructure
             _configuration = configuration;
             _context = context;
 
-            // Laad alle studenten bij aanmaken van de repository
-            RefreshAdress();
+            // Laad alle addressen bij aanmaken van de repository
+            RefreshAddress();
         }
 
         public Dictionary<string, Address> Adresses
         {
             get
             {
-                if (_adresses != null) return _adresses;
-                return RefreshAdress();
+                if (_addresses != null) return _addresses;
+                return RefreshAddress();
             }
         }
 
-        public Dictionary<string, Address> RefreshAdress()
+        public Dictionary<string, Address> RefreshAddress()
         {
-            _adresses = new Dictionary<string, Address>();
-            // vanaf hier nog niet aangepast
-            var dbStudents = _context.Students.Include(s => s.RegistrationState).ToList();
-
-            foreach (var student in dbStudents)
+            _addresses = new();
+            var dbaddresss = _context.addresses.ToList();
+            foreach (var sg in dbaddresss)
             {
-                var p = _personRepository.Persons.Values.Where(person => person.FirstName == student.Person.FirstName && student.Person.LastName == student.Person.LastName).FirstOrDefault();
-                if (p == null)
+                var address = new address
                 {
-                    p = new Person { FirstName = student.Person.FirstName, LastName = student.Person.LastName };
-                    _personRepository.Insert(p);
+                    Name = sg.Name
                 };
-                var s = new Student
-                {
-                    Firstname = p.FirstName,
-                    LastName = p.LastName,
-                    Mobile = string.IsNullOrEmpty(student.Mobile) ? p.Mobile : student.Mobile,
-                    Email = string.IsNullOrEmpty(student.Email) ? p.Email : student.Email,
-                    OfficialCode = student.OfficialCode,
-                    RegistrationState = student.RegistrationState.Description
-
-                };
-                _students.Add(p.FirstName + " " + p.LastName, s);
+                _addresss.Add(sg.Name, address);
             }
-
-            return _students;
+            return _addresss;
         }
 
         public void Update(Student student)

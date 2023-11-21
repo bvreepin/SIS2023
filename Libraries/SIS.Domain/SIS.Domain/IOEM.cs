@@ -8,14 +8,14 @@ namespace SIS.Domain
 {
     public class IOEM
     {
-        public string ShortName { get; set; } = null!;
+        public string ShortName { get; set; } = string.Empty;
 
-        public string Description { get; set; } = null!;
+        public string Description { get; set; } = string.Empty;
 
-        public string? Title { get; set; }
+        public string? Title { get; set; } = string.Empty;
 
-        public string? Detail { get; set; }
+        public string? Detail { get; set; } = string.Empty;
 
-        public string? Remark { get; set; }
+        public string? Remark { get; set; } = string.Empty;
     }
 }
