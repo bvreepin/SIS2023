@@ -16,20 +16,20 @@ namespace SIS.API.Controllers
     public class AddressController : ControllerBase
     {
         private readonly ILogger<AddressController> _logger;
-        private readonly ISISAdressRepository _repository;
+        private readonly ISISAddressRepository _repository;
         private readonly IMapper _mapper;
 
-        public AddressController(ILogger<AddressController> logger, ISISAdressRepository repository, IMapper mapper)
+        public AddressController(ILogger<AddressController> logger, ISISAddressRepository repository, IMapper mapper)
         {
             _logger = logger;
             _repository = repository;
             _mapper = mapper;
         }
 
-        [HttpGet(Name = "GetAdressess")] //meervoud adressen of enkelvoud?
+        [HttpGet(Name = "GetAddresses")]
         public ActionResult<IEnumerable<AddressDTO>> Get()
         {
-            return Ok(_mapper.Map<List<AddressDTO>>(_repository.Adresses.Values.ToList()));
+            return Ok(_mapper.Map<List<AddressDTO>>(_repository.Addresses.Values.ToList()));
         }
     }
 }

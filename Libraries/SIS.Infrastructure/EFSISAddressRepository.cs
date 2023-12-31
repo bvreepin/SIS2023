@@ -2,12 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using SIS.Domain;
+using SIS.Domain.Interfaces;
 using SIS.Infrastructure.EFRepository.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SIS.Infrastructure
 {
@@ -25,45 +21,68 @@ namespace SIS.Infrastructure
             _configuration = configuration;
             _context = context;
 
-            // Laad alle addressen bij aanmaken van de repository
-            RefreshAddress();
+            // Laad alle adressen bij aanmaken van de repository
+            RefreshAddresses();
         }
 
-        public Dictionary<string, Address> Adresses
+        public Dictionary<string, Address> Addresses
         {
             get
             {
                 if (_addresses != null) return _addresses;
-                return RefreshAddress();
+                return RefreshAddresses();
             }
         }
 
-        public Dictionary<string, Address> RefreshAddress()
+        public Dictionary<string, Address> RefreshAddresses()
         {
             _addresses = new();
-            var dbaddresss = _context.addresses.ToList();
-            foreach (var sg in dbaddresss)
+            var dbAddresses = _context.Addresses.ToList();
+            foreach (var adr in dbAddresses)
             {
-                var address = new address
+                var address = new Address
                 {
-                    Name = sg.Name
+                    Street = adr.Street,
+                    City = adr.City,
+                    Bus = adr.Bus,
+                    CountryId = adr.CountryId,
+                    StreetNumber = adr.StreetNumber,
+                    PostalCode = adr.PostalCode
                 };
-                _addresss.Add(sg.Name, address);
+                _addresses.Add(adr.Street + " " + adr.StreetNumber + " " + adr.Bus + " " + adr.City, address);
             }
-            return _addresss;
+            return _addresses;
         }
 
-        public void Update(Student student)
+        public void Insert(Address address)
+        {
+            if (_addresses.ContainsKey(address.Street + " " + address.StreetNumber + " " + address.Bus + " " + address.City))
+                return;
+
+            EFRepository.Models.Address newAddress = new()
+            {
+                Street = address.Street,
+                City = address.City,
+                Bus = address.Bus,
+                CountryId = address.CountryId,
+                StreetNumber = address.StreetNumber,
+                PostalCode = address.PostalCode
+            };
+            var efAddress = _context.Addresses.Add(newAddress).Entity;
+            var count = _context.SaveChanges();
+        }
+        
+        public void Update(Address address)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Student student)
+        public void Delete(Address address)
         {
             throw new NotImplementedException();
         }
 
-        public bool Exists(Student student)
+        public bool Exists(Address address)
         {
             throw new NotImplementedException();
         }
